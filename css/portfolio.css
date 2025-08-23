@@ -1,0 +1,71 @@
+.portfolio__pages{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.pages{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.pages img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 10px;
+    display: block;
+    transition: all .5s;
+}
+
+.description{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(var(--gray-light), var(--gray-darker));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: all .5s;
+}
+
+.description a{
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 50px;
+    background: var(--gray-darker);
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all .3s;
+}
+
+.description a:hover{
+    scale: 1.1;
+}
+
+.description i{
+    color: var(--gray-lighter);
+}
+
+.description h3{
+    margin-bottom: 20px;
+}
+
+.pages:hover{
+    transform: scale(1.1);
+}
+
+.pages:hover .description{
+    height: 100%;
+}

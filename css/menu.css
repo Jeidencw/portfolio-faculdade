@@ -1,0 +1,53 @@
+.header{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    backdrop-filter: blur(50px);
+}
+
+.menu__container{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+}
+.menu li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    transition: all .4s ease;
+}
+
+.menu li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--gray-lighter);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.menu li a.active::after{
+    width: 100%;
+}
+
+.menu li a:hover{
+    scale: 1.1;
+}

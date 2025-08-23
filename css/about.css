@@ -1,0 +1,51 @@
+#about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about__text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.about__photo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: peru;
+} 
+
+.about__title{
+    margin-top: -20px;
+    font-size: 40px;
+}
+
+.about__subtitle{
+    font-size: 20px;
+}
+
+.about__description{
+    font-size: 18px;
+}
+
+.about__icons{
+    display: flex;
+    gap: 15px;
+    font-size: 32px;
+}
+
+.about__icons i{
+    transition: all .3s;
+}
+
+.about__icons i:hover{
+    scale: 1.1;
+}
+
+.about__icons i{
+    color: var(--gray-light);
+}
