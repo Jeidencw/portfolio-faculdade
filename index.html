@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/portfolio.css">
     <link rel="stylesheet" href="./css/scrollup.css">
+    <link rel="stylesheet" href="./css/education.css">
 </head>
 <body>
     <header class="header">
@@ -21,7 +22,7 @@
                 <li><a href="#education">Formação</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>
                 <li><a href="#contact">Contato</a></li>
-                <li><a href="curriculo.pdf" download="Curriculo" class="btn">Currículo</a></li>
+                <li><a href="curriculo.pdf" target="_blank" rel="noopener noreferrer" class="btn">Currículo</a></li>
             </ul>
         </nav>
     </header>
@@ -53,12 +54,45 @@
             </div>
 
             <div class="about__photo">
-                foto
+                <img src="./img/eu.png" alt="Eu">
             </div>
         </section>
+
         <section class="container" id="education">
-            <p>Seção Formação</p>
+            <h2 class="title">Formação</h2>
+            <p class="education__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur impedit optio quaerat expedita quibusdam? Sequi, libero optio possimus provident quae natus incidunt sapiente tenetur! Voluptatibus, nulla? Explicabo voluptatem illo beatae!</p>
+
+            <div class="tab__titles">
+                <p class="tab__links active__link" onclick="opentab('skills')">Habilidades</p>
+                <p class="tab__links" onclick="opentab('educations')">Educação</p>
+                <p class="tab__links" onclick="opentab('language')">Idioma</p>
+            </div>
+            
+            <div class="tab__contents__container">
+                <div class="tab__contents active__tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designer Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>App Development</span><br>Buildings Android/IOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab__contents" id="educations">
+                    <ul>
+                        <li><span>2021 - Current</span><br>UI/UX Design Training at ET Instute</li>
+                        <li><span>2019 - 2021</span><br>Team lead at StartApp LLc</li>
+                        <li><span>2016 - 2017</span><br>Internship at ekart eCommerce</li>
+                    </ul>
+                </div>
+                <div class="tab__contents" id="language">
+                    <ul>
+                        <li><span>2016</span><br>UI/UX Design Training at ET Instutes</li>
+                        <li><span>2016</span><br>MBA from MIT Bangalore</li>
+                        <li><span>2014</span><br>BBA from ISM Bangalore</li>
+                    </ul>
+                </div>
+            </div>
         </section>
+
         <section class="container" id="portfolio">
             <h2 class="title">Portfólio</h2>
 
@@ -113,6 +147,7 @@
                 </div>
             </div>
         </section>
+
         <section class="container" id="contact">
             <h2 class="title">Contatos</h1>
 
@@ -158,6 +193,7 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/scrollup.js"></script>
+    <script src="./js/education.js"></script>
     <script src="https://kit.fontawesome.com/4c8f2c38f2.js" crossorigin="anonymous"></script>
 </body>
 </html>

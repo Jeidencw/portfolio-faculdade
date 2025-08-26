@@ -1,0 +1,57 @@
+.education__text{
+    max-width: 800px;
+}
+
+.tab__titles{
+    display: flex;
+    margin: 40px 0 20px 0;
+}
+
+.tab__links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab__links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--gray-lighter);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: .5s all;
+}
+
+.tab__links.active__link::after{
+    width: 100%;
+}
+
+.tab__contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab__contents ul li span{
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.tab__contents {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: .3s all;
+}
+
+.tab__contents.active__tab {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
