@@ -1,16 +1,16 @@
-const tablinks = document.getElementsByClassName('tab__links');
-const tabcontents = document.getElementsByClassName('tab__contents');
+const tabLinks = document.querySelectorAll('.tab__links')
+const tabContents = document.querySelectorAll('.tab__contents')
 
-function opentab (tabname) {
-    for(tablink of tablinks){
-        tablink.classList.remove('active__link')
-    }
+const opentab = (tabname, element) => {
+    tabLinks.forEach(link => link.classList.remove('active__link'))
+    tabContents.forEach(content => content.classList.remove('active__tab'))
 
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove('active__tab')
-    }
-
-    event.currentTarget.classList.add('active__link')
-
+    element.classList.add('active__link')
     document.getElementById(tabname).classList.add('active__tab')
 }
+
+tabLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        opentab(link.dataset.tab, event.currentTarget)
+    })
+})

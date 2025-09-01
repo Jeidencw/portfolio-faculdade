@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalho - Henrique</title>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Muitos css para facilitar a manutenção -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/about.css">
@@ -15,9 +16,11 @@
     <link rel="stylesheet" href="./css/education.css">
 </head>
 <body>
+    <!-- Tag Header para sinalizar que isso vai ficar no topo da página -->
     <header class="header">
         <nav class="menu__container container">
             <ul class="menu">
+                <!-- Cada # faz referencia ao id de uma sessão da página -->
                 <li><a href="#about" class="active">Sobre</a></li>
                 <li><a href="#education">Formação</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>
@@ -27,7 +30,9 @@
         </nav>
     </header>
 
+    <!-- Conteudo principal -->
     <main>
+        <!-- Divido em sessões -->
         <section class="container" id="about">
             <div class="about__text">
                 <h3 class="about__subtitle"><span>Olá,</span> me chamo</h3>
@@ -35,12 +40,18 @@
                 <h1 class="about__title">Henrique</h1>
 
                 <p class="about__description">
-                    Sou um desenvolvedor em formação, estudando programação há pouco mais de dois anos, com o objetivo de realizar uma transição de carreira. <br><br>
-                    Escolhi essa área porque é onde mais me identifico. Tenho grande interesse na resolução de problemas e na busca por soluções criativas e eficientes para diferentes desafios.               
+                    Sou um desenvolvedor em formação, estudando programação há pouco mais de dois anos, 
+                    com o objetivo de realizar uma transição de carreira. <br><br>
+                    Escolhi essa área porque é onde mais me identifico. Tenho grande interesse 
+                    na resolução de problemas e na busca por soluções criativas e eficientes para diferentes desafios.               
                 </p>
 
                 <a href="#contact" class="btn">Contato</a>
-                    
+                
+                <!-- target="_blank" para abrir os link em outra guia -->
+                <!-- rel="noopener noreferrer" colocado por padrão em links para aumentar a segurança,
+                 impede a página de destino de ter acesso e oculta informações da página original -->
+                
                 <div class="about__icons">
                     <a href="https://github.com/Jeidencw" target="_blank" rel="noopener noreferrer" class="home__social-link">
                         <i class="fa-brands fa-github"></i>
@@ -61,17 +72,21 @@
 
         <section class="container" id="education">
             <h2 class="title">Formação</h2>
+
             <p class="education__text">
-                Tenho estudado a mais de 2 anos, não tanto queria, mas estou evoluindo bastante, fiz alguns cursos mas
-                a maior parte do conhecimento veio atravez de projetos completos achados no youtube, GitHub. Fui pegando 
-                esses projetos, modificando, acrescentando novas funcionalidades, sempre pesquisando muito.
+                Estudo programação há mais de dois anos, buscando evoluir continuamente. Embora tenha feito alguns cursos,
+                grande parte do meu conhecimento veio através de projetos completos encontrados no YouTube
+                e no GitHub. Costumo pegar esses projetos, modificá-los, acrescentar novas funcionalidades e
+                pesquisar bastante para aprimorar minhas habilidades.
             </p>
 
+            <!-- Usando data para colocar atributos personalizados fáceis de acessar com js -->
             <div class="tab__titles">
-                <p class="tab__links active__link" onclick="opentab('skills')">Habilidades</p>
-                <p class="tab__links" onclick="opentab('educations')">Educação</p>
-                <p class="tab__links" onclick="opentab('language')">Idioma</p>
+                <p class="tab__links active__link" data-tab="skills">Habilidades</p>
+                <p class="tab__links" data-tab="educations">Educação</p>
+                <p class="tab__links" data-tab="language">Idioma</p>
             </div>
+
             
             <div class="tab__contents__container">
                 <div class="tab__contents active__tab" id="skills">

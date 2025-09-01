@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 
+/* reset bem básico, font e color para toda a página */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,8 @@
     color: var(--gray-lighter);
 }
 
+
+/* Criando váriaveis de cores globais */
 :root {
     --gray-darkest: #1a1a1a;
     --gray-darker:  #2e2e2e;
@@ -16,18 +19,22 @@
     --gray-medium:  #7a7a7a;
     --gray-light:   #bfbfbf;
     --gray-lighter: #e0e0e0;
-    --gray-lightest:#f5f5f5;
 }
 
+/* Quando for clicado em um bolão ir rolando a página, não ir de uma vez */
 html {
     scroll-behavior: smooth;
 }
 
+
+/* Colocando as cores de fundo juntas para poder modificar facilmente */
 #about { background: var(--gray-dark); }
 #education { background: var(--gray-darker); }
 #portfolio { background: var(--gray-darkest); }
 #contact { background: var(--gray-medium); } 
 
+
+/* Criando alguns css padrões para usar em toda a página */
 .container {
     max-width: 1150px;
     margin: 0 auto;
