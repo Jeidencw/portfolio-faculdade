@@ -18,6 +18,11 @@
     justify-content: center;
 }
 
+.about__text,
+.about__photo{
+    padding: 15px;
+}
+
 .about__photo img{
     width: 100%;
 }
@@ -33,6 +38,7 @@
 
 .about__description{
     font-size: 18px;
+    text-align: justify;
 }
 
 .about__icons{
