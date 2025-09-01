@@ -1,5 +1,7 @@
 const menuLinks = document.querySelectorAll('.menu a')
 
+//IntersectionObserver serve para observar quando um elemento sai e entra na tela,
+//coloquei isso para ir mudando o menu toda vez que entra 50% de uma section na tela
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const link = document.querySelector(`.menu a[href="#${entry.target.id}"]`)
@@ -10,7 +12,7 @@ const observer = new IntersectionObserver(entries => {
         }
     })
 }, {
-    threshold: 0.5 // Ativa quando 50% da seção estiver visível
+    threshold: 0.5
 })
 
 document.querySelectorAll('section[id]').forEach(section => {
@@ -18,9 +20,16 @@ document.querySelectorAll('section[id]').forEach(section => {
 })
 
 
+//envia o formulário para o meu email, teve que ser feito dessa forma
+//pq por padrão o formspree abre uma página com anunicio deles, ai foi
+//tirado o comportamento padrão e.preventDefault() e caso desse certo
+//só mostra um icone de correto
+
 const form = document.getElementById("contact__form")
 const formStatus = document.getElementById("form__status")
 
+//função async pq tem que esperar a resposta do servidor para então
+//dar continuidade no tratamento da informação
 form.addEventListener("submit", async e => {
     e.preventDefault()
 
@@ -58,10 +67,11 @@ form.addEventListener("submit", async e => {
 })
 
 
-function copyToClipboard(text) {
+// cria uma função para copiar as informações de contato quando clicadas
+const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text).then(() => {
-        alert("Copiado: " + text);
+        alert("Copiado: " + text)
     }).catch(err => {
-        console.error("Erro ao copiar: ", err);
-    });
+        console.error("Erro ao copiar: ", err)
+    })
 }
